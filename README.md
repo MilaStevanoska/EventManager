@@ -5,8 +5,13 @@
 
 SportEventManagement is a .NET Core-based application designed to facilitate ticket purchases and provide an admin interface for managing event registrations. The application follows Onion Architecture for clean, maintainable, and scalable development, and is hosted on Microsoft Azure with an Azure PostgreSQL database for data storage.
 
-### __Features__
+![Screenshot (118)](https://github.com/user-attachments/assets/be2bdc70-725a-46c9-97ba-dbbfaba4a536)
+![Screenshot (115)](https://github.com/user-attachments/assets/8ae9af74-64c7-4961-ad21-eeb9808184bb)
+![Screenshot (116)](https://github.com/user-attachments/assets/cc5d818a-28c5-465a-bc55-b877aa55bc8b)
+![Screenshot (117)](https://github.com/user-attachments/assets/2206f30f-4a98-49b0-90e9-42fa62925105)
 
+
+### __Features__
 * Ticket Purchasing and Upcoming Events: Users can browse upcoming sports events and easily purchase tickets through the integrated Stripe payment gateway.
 * Event Registration and Approval: Users can register for sports events, and administrators can review and approve registrations via the admin panel.
 * External API Integration: The app communicates with external APIs to ensure up-to-date event data and real-time updates.
