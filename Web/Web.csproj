@@ -1,0 +1,83 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>aspnet-Web-4F4A2950-E463-4E8B-A5C8-63E59AE32744</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="EPPlus" Version="7.3.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.4"/>
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.4"/>
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.4"/>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.8" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.4"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.8" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4"/>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.4" />
+        <PackageReference Include="Stripe.net" Version="45.10.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Repository\Repository.csproj" />
+      <ProjectReference Include="..\Service\Service.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Controllers\Participant.cs" />
+      <Compile Remove="Controllers\EventController.cs" />
+      <Compile Remove="Views\Event_\**" />
+      <Compile Remove="Controllers\EventsController.cs" />
+      <Compile Remove="Views\Event\**" />
+      <Compile Remove="Controllers\Ticket.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Views\Event_\**" />
+      <EmbeddedResource Remove="Views\Event\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="Views\Event_\**" />
+      <Content Remove="Views\Event\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Views\Event_\**" />
+      <None Remove="Views\Event\**" />
+      <None Update="Ticket-Template.docx">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Event_\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Event_\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Event_\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Event_\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Event_\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Event\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Event\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Event\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Event\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Event\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Ticket\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Ticket\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Ticket\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Ticket\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Ticket\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Participant\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Participant\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Participant\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Participant\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Participant\Index.cshtml" />
+    </ItemGroup>
+
+</Project>
